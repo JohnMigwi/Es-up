@@ -11,5 +11,11 @@ const accountData = {
   
 
 
-const {accessLogs : depo} = accountData;
-console.log(depo[1].time);
+const { accessLogs: logs} = accountData;
+
+const [firstlog, secondlog] = logs;
+
+const {user: user, time:time} = firstlog;
+const {user: user2, time:time2} = secondlog;
+
+console.log(user2);

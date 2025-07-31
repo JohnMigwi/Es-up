@@ -1,18 +1,15 @@
-const SimpleBankAccount = {
-    owner: "Misky",               
-    accountNumber: "ACC123456",   
-    balance: 0,                   
-    currency: "ETH",              
-    isActive: true,               
-    creationDate: "2025-07-31",   
-    withdrawalLimit: 5,           
-    dailyWithdrawn: 0,            
-    transactionHistory: [],       
-    accountType: "personal",      
-    authorizedUsers: ["Misky"],   
-    locked: false                 
+const accountData = {
+    deposits: [100, 250, 400, 150],
+    withdrawals: [50, 100],
+    currencies: ["ETH", "BTC", "USDT"],
+    authorizedUsers: ["Misky", "Ali", "Riya"],
+    accessLogs: [
+      { user: "Misky", time: "2025-07-31T10:00:00Z" },
+      { user: "Ali", time: "2025-07-30T18:45:00Z" }
+    ]
   };
   
 
-  const {owner : hid, currency: mon, authorizedUsers} = SimpleBankAccount;
-  console.log(`${mon}`);
+
+const {accessLogs : depo} = accountData;
+console.log(depo[1].time);
